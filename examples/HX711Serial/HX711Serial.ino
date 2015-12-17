@@ -41,12 +41,13 @@ scale.get_value(5);		// print the average of 5 readings from the ADC minus the t
 	scale.get_units(5)        // print the average of 5 readings from the ADC minus tare weight, divided 
 						// by the SCALE parameter set with set_scale
 
-  Serial.println("Readings:");
+
 }
 
 void loop() {
-  Serial.print("one reading:\t");
-  
+
+  Serial.print(scale.get_units(), 1);
+
 
   scale.power_down();			        // put the ADC in sleep mode
   delay(5);
